@@ -127,13 +127,9 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <section id="about"><div class="wrap rv">
 <div class="eyebrow">About me</div><h2>Practical cloud engineering, built hands-on.</h2>
 <div class="grid" style="grid-template-columns:1.4fr 1fr">
-<div><p class="sub" style="max-width:none">I’m a B.Sc. Computer Science (Cloud Computing, Honours) student at MIT World Peace University, Pune, interested in building reliable cloud systems and automating software delivery. I work with AWS, Linux, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, and monitoring tools such as Datadog and Amazon CloudWatch. I enjoy learning by building practical projects—from infrastructure automation to containerized applications and CI/CD pipelines.</p><p class="sub" style="max-width:none">My goal is to grow as a Cloud & DevOps Engineer by solving practical problems, improving deployment workflows, and continuously learning through hands-on projects.</p></div>
+<div><p class="sub" style="max-width:none">I’m a B.Sc. Computer Science (Cloud Computing, Honours) student at MIT World Peace University, Pune, interested in building reliable cloud systems and automating software delivery. I work with AWS, Linux, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, and monitoring tools such as Datadog and Amazon CloudWatch. I enjoy learning by building practical projects—from infrastructure automation to containerized applications and CI/CD pipelines.</p><p class="sub" style="max-width:none">My goal is to grow as a Cloud &amp; DevOps Engineer by solving practical problems, improving deployment workflows, and continuously learning through hands-on projects.</p></div>
 <div class="glass card"><h3>Core strengths</h3><div class="chips"><span class="chip">Problem solving</span><span class="chip">Troubleshooting</span><span class="chip">Analytical thinking</span><span class="chip">Communication</span><span class="chip">Team collaboration</span><span class="chip">Adaptability</span></div></div></div>
 </div></section>
-
-
-
-
 
 <section id="skills"><div class="wrap rv">
 <div class="eyebrow">Technical skills</div><h2>My toolbox.</h2>
@@ -167,20 +163,8 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <div class="chips"><span class="chip">Cloud Computing</span><span class="chip">Computer Networks</span><span class="chip">DevOps and CI/CD</span><span class="chip">Infrastructure as Code</span><span class="chip">Operating Systems</span><span class="chip">Linux Administration</span><span class="chip">Containerization &amp; Orchestration</span><span class="chip">Computer Security</span><span class="chip">DBMS</span><span class="chip">Cloud Infrastructure Management</span></div>
 </div></section>
 
-<section id="ats"><div class="wrap rv">
-<div class="eyebrow">Interactive · ATS check</div><h2>How well does my resume match your role?</h2>
-<p class="sub">Paste a job description and see how many of its cloud and DevOps keywords appear in my resume, the way an applicant tracking system would scan it.</p>
-<div class="ats">
-<div class="glass card"><h3>Job description</h3>
-<textarea id="jd" placeholder="Paste a job description here, e.g. “DevOps Intern: Terraform, AWS, Docker, Kubernetes, Jenkins, Ansible…”"></textarea>
-<div class="cta" style="margin-top:14px"><button class="btn" id="an">Check match</button><button class="btn ghost" id="sm">Try sample</button><button class="btn ghost" id="cl">Clear</button></div>
-<p class="note">Runs in your browser. Nothing is uploaded. This is a keyword-match estimate, not a real ATS.</p></div>
-<div class="glass card" id="res" style="text-align:center">
-<div class="ring"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="62" stroke="rgba(255,255,255,.08)"/><circle id="rg" cx="75" cy="75" r="62" stroke="#4aa3ff" stroke-dasharray="389.6" stroke-dashoffset="389.6"/></svg><b><span id="sc">--</span><small>MATCH</small></b></div>
-<h3 id="vd">Waiting for a job description</h3><p id="tp">Paste one on the left and press “Check match”.</p>
-<div style="text-align:left"><h4>Found in my resume</h4><div class="chips" id="mt"></div><h4>Not on my resume yet</h4><div class="chips" id="ms"></div></div>
-</div></div>
-</div></section>
+<!-- ATS section: its content is built by the second script below -->
+<section id="ats"><div class="wrap rv"></div></section>
 
 <section class="contact" id="contact"><div class="wrap rv">
 <div class="eyebrow">Contact</div><h2>Let’s build something reliable.</h2>
@@ -219,8 +203,7 @@ var E={dev:{n:1,c:'#7cf2c3'},staging:{n:2,c:'#ffb23f'},prod:{n:3,c:'#ff6b81'}};
 function nd(x,y,l,s,c,d){return '<g class="nd" style="animation-delay:'+d+'s"><rect x="'+x+'" y="'+y+'" width="116" height="42" rx="10" stroke="'+c+'"/><text x="'+(x+58)+'" y="'+(y+18)+'">'+l+'</text><text x="'+(x+58)+'" y="'+(y+33)+'" style="fill:#93a0c2;font-size:9px">'+s+'</text></g>'}
 function ln(x1,y1,x2,y2,c){return '<path class="flow" d="M'+x1+' '+y1+' C'+(x1+40)+' '+y1+' '+(x2-40)+' '+y2+' '+x2+' '+y2+'" fill="none" stroke="'+c+'" stroke-width="1.6" opacity=".7"/>'}
 function draw(k){var e=E[k],c=e.c,h='<rect x="140" y="20" width="400" height="290" rx="16" fill="none" stroke="'+c+'" stroke-dasharray="3 5" opacity=".5"/><text x="154" y="42" fill="'+c+'" font-size="11" font-family="Consolas,monospace">VPC · '+k+'</text>';
-h+=nd(10,142,'Internet','users','#4aa3ff',0);var ys=[];
-for(var i=0;i<e.n;i++){var y=e.n===1?142:70+i*(190/(e.n-1)||0)+(e.n===2?30:0)-(e.n===2?0:0);ys.push(y)}
+h+=nd(10,142,'Internet','users','#4aa3ff',0);var ys=[142];
 if(e.n===2)ys=[100,184];if(e.n===3)ys=[62,142,222];
 ys.forEach(function(y,i){h+=ln(126,163,170,y+21,c)+nd(170,y,'EC2 #'+(i+1),'sg: web',c,.1+i*.1)+ln(286,y+21,400,163,c)});
 h+=nd(400,142,'RDS','private subnet',c,.4);
@@ -241,22 +224,108 @@ function sk(f){$('#sgrid').innerHTML=ks.filter(function(k){return f==='All'||k==
 $('#stabs').onclick=function(ev){var b=ev.target.closest('.tab');if(!b)return;document.querySelectorAll('#stabs .tab').forEach(function(t){t.classList.remove('on')});b.classList.add('on');sk(b.dataset.k)};
 function tilt(){if(rm)return;document.querySelectorAll('.card').forEach(function(c){c.onpointermove=function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform='perspective(800px) rotateY('+x*6+'deg) rotateX('+(-y*6)+'deg)'};c.onpointerleave=function(){c.style.transform=''}})}
 sk('All');
-/* ATS checker */
-var D=[['AWS',['aws','amazon web services'],1],['EC2',['ec2'],1],['VPC',['vpc'],1],['EKS',['eks'],1],['S3',['s3'],1],['RDS',['rds'],1],['IAM',['iam'],1],['DynamoDB',['dynamodb'],1],['CloudWatch',['cloudwatch'],1],['Azure',['azure'],1],['GCP',['gcp','google cloud'],1],['Terraform',['terraform'],1],['CloudFormation',['cloudformation'],1],['Infrastructure as Code',['infrastructure as code','iac'],1],['Docker',['docker'],1],['Kubernetes',['kubernetes','k8s'],1],['Jenkins',['jenkins'],1],['GitLab CI',['gitlab'],1],['CI/CD',['ci/cd','cicd','continuous integration','continuous delivery','continuous deployment'],1],['SonarQube',['sonarqube'],1],['Datadog',['datadog'],1],['Monitoring',['monitoring','observability'],1],['Linux',['linux','ubuntu'],1],['Bash',['bash','shell script'],1],['Python',['python'],1],['Git',['git','github'],1],['Networking',['tcp/ip','dns','cidr','networking'],1],['Least Privilege',['least privilege','security groups'],1],['Auto Scaling',['auto scaling','asg'],1],['Ansible',['ansible'],0],['Helm',['helm'],0],['Prometheus',['prometheus'],0],['Grafana',['grafana'],0],['GitHub Actions',['github actions'],0],['Argo CD',['argocd','argo cd'],0],['Lambda',['lambda'],0],['Load Balancer',['load balancer','elb','alb'],0],['Nginx',['nginx'],0],['Java',['java'],0],['Go',['golang'],0],['Vault',['hashicorp vault'],0],['ELK',['elk','elasticsearch'],0],['Azure DevOps',['azure devops'],0]];
-var SM='DevOps Intern\n\nWe are looking for an intern with hands-on experience in AWS (EC2, VPC, S3, IAM), Terraform, Docker and Kubernetes. You will build CI/CD pipelines using Jenkins, monitor systems with Datadog or Prometheus, and write Bash or Python scripts on Linux. Knowledge of Ansible, Helm and Grafana is a plus.';
-function has(t,a){return a.some(function(x){return new RegExp('(^|[^a-z0-9])'+x.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+'($|[^a-z0-9])','i').test(t)})}
-function ats(){var t=$('#jd').value,f=D.filter(function(d){return has(t,d[1])}),m=f.filter(function(d){return d[2]}),x=f.filter(function(d){return !d[2]}),r=$('#rg'),C=389.6;
-function ch(a,c){return a.length?a.map(function(d){return '<span class="chip '+c+'">'+d[0]+'</span>'}).join(''):'<span class="note" style="margin:0">None</span>'}
-if(!f.length){$('#sc').textContent='--';r.style.strokeDashoffset=C;$('#vd').textContent=t.trim()?'No recognised keywords':'Waiting for a job description';$('#tp').textContent=t.trim()?'I could not find any cloud or DevOps keywords in that text. Try pasting the full job description.':'Paste one on the left and press “Check match”.';$('#mt').innerHTML='';$('#ms').innerHTML='';return}
-var s=Math.round(m.length/f.length*100);r.style.strokeDashoffset=C*(1-s/100);r.style.stroke=s>=75?'#7cf2c3':s>=50?'#4aa3ff':'#ff9d3f';
-var n=0,i=setInterval(function(){n+=Math.max(1,Math.ceil(s/25));if(n>=s){n=s;clearInterval(i)}$('#sc').textContent=n+'%'},30);
-$('#vd').textContent=s>=75?'Strong match':s>=50?'Good match':'Partial match';
-$('#tp').textContent=m.length+' of '+f.length+' keywords found. '+(x.length?'Gaps like '+x.slice(0,3).map(function(d){return d[0]}).join(', ')+' are areas I’m keen to learn.':'Everything in this description is covered.');
-$('#mt').innerHTML=ch(m,'ok');$('#ms').innerHTML=ch(x,'miss')}
-$('#an').onclick=ats;$('#sm').onclick=function(){$('#jd').value=SM;ats()};$('#cl').onclick=function(){$('#jd').value='';ats()};
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.1});
 document.querySelectorAll('.rv').forEach(function(x){io.observe(x)});
 })();
+</script>
+
+<script>
+/* ATS checker with resume upload (PDF, DOCX, TXT). Runs fully in the browser. */
+(function(){
+var host=document.querySelector('#ats .wrap');if(!host)return;
+var $=function(s){return host.querySelector(s)};
+
+/* ---------- styles ---------- */
+var st=document.createElement('style');st.textContent=
+'.drop{display:block;border:2px dashed var(--line);border-radius:16px;padding:22px;text-align:center;cursor:pointer;transition:.2s;color:var(--mute)}'+
+'.drop:hover,.drop.over{border-color:var(--c);background:rgba(124,242,195,.06);color:var(--ink)}'+
+'.drop b{display:block;font-size:1.05rem;color:var(--ink)}.drop input{display:none}'+
+'#rst{font-size:.84rem;margin:10px 0 0;color:var(--mute)}#rst.ok{color:var(--c)}#rst.err{color:var(--b)}'+
+'#rtxt{width:100%;min-height:110px;margin-top:10px;background:#05070f;color:var(--ink);border:1px solid var(--line);border-radius:12px;padding:12px;font:.82rem/1.5 Consolas,Menlo,monospace;resize:vertical}'+
+'details{margin-top:10px;color:var(--mute);font-size:.85rem}summary{cursor:pointer}'+
+'.step{font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--b);font-weight:700;margin:18px 0 8px}.step:first-child{margin-top:0}'+
+'.chip.bad{background:rgba(255,107,129,.12);color:#ff6b81;border-color:rgba(255,107,129,.3)}';
+document.head.appendChild(st);
+
+/* ---------- layout ---------- */
+host.innerHTML=
+'<div class="eyebrow">Interactive · ATS score checker</div><h2>Check any resume against any job description.</h2>'+
+'<p class="sub">Upload your resume, paste a job description, and get a keyword-match score with the gaps to fix. Your files never leave your browser.</p>'+
+'<div class="ats"><div class="glass card">'+
+'<div class="step">1 · Your resume</div>'+
+'<label class="drop" id="drop"><b>⬆ Upload resume</b>PDF, DOCX or TXT · drag and drop or click<input type="file" id="rf" accept=".pdf,.docx,.txt,application/pdf"></label>'+
+'<p id="rst">Using the default resume from this portfolio. Upload yours to test it instead.</p>'+
+'<details><summary>Or paste your resume text</summary><textarea id="rtxt" placeholder="Paste resume text here"></textarea></details>'+
+'<div class="step">2 · Job description</div>'+
+'<textarea id="jd" placeholder="Paste the job description here…"></textarea>'+
+'<div class="cta" style="margin-top:14px"><button class="btn" id="an">Check ATS score</button><button class="btn ghost" id="sm">Try sample</button><button class="btn ghost" id="cl">Clear</button></div>'+
+'<p class="note">This is a keyword-match estimate, not a real ATS. Real systems vary, but missing keywords and unreadable formatting are the usual causes of rejection.</p></div>'+
+'<div class="glass card" style="text-align:center">'+
+'<div class="ring"><svg width="150" height="150" viewBox="0 0 150 150"><circle cx="75" cy="75" r="62" stroke="rgba(255,255,255,.08)"/><circle id="rg" cx="75" cy="75" r="62" stroke="#4aa3ff" stroke-dasharray="389.6" stroke-dashoffset="389.6"/></svg><b><span id="sc">--</span><small>ATS SCORE</small></b></div>'+
+'<h3 id="vd">Waiting for a job description</h3><p id="tp">Add a job description and press “Check ATS score”.</p>'+
+'<div style="text-align:left"><h4>Keywords found in resume</h4><div class="chips" id="mt"></div><h4>Missing keywords</h4><div class="chips" id="ms"></div><h4>Resume health</h4><div class="chips" id="hl"></div></div>'+
+'</div></div>';
+
+/* ---------- keyword dictionary ---------- */
+var D=('AWS:aws|amazon web services;EC2:ec2;VPC:vpc;EKS:eks;S3:s3;RDS:rds;IAM:iam;DynamoDB:dynamodb;CloudWatch:cloudwatch;Azure:azure;GCP:gcp|google cloud;'+
+'Terraform:terraform;CloudFormation:cloudformation;Infrastructure as Code:infrastructure as code|iac;Docker:docker;Kubernetes:kubernetes|k8s;Helm:helm;'+
+'Jenkins:jenkins;GitLab CI:gitlab;GitHub Actions:github actions;CI/CD:ci/cd|cicd|continuous integration|continuous delivery|continuous deployment;'+
+'SonarQube:sonarqube;Jest:jest;Datadog:datadog;Prometheus:prometheus;Grafana:grafana;Monitoring:monitoring|observability;'+
+'Linux:linux|ubuntu;Bash:bash|shell script;Python:python;Git:git|github;Ansible:ansible;Networking:tcp/ip|dns|cidr|networking;'+
+'Least Privilege:least privilege|security groups;Auto Scaling:auto scaling|asg;Lambda:lambda;Load Balancer:load balancer|elb|alb;Nginx:nginx;Java:java;'+
+'Argo CD:argocd|argo cd;Vault:hashicorp vault;ELK:elk|elasticsearch;Azure DevOps:azure devops;Agile:agile|scrum').split(';').map(function(x){var p=x.split(':');return{k:p[0],a:p[1].split('|')}});
+var DEFAULT='AWS EC2 VPC EKS ECR S3 RDS IAM DynamoDB CloudWatch Azure GCP Terraform CloudFormation Docker Kubernetes kubectl Jenkins GitLab CI SonarQube Jest Datadog monitoring Linux Ubuntu Bash Python Git GitHub TCP/IP DNS CIDR security groups least privilege CI/CD infrastructure as code auto scaling ASG sarthakiparad@gmail.com +91-9377229309 summary skills projects education';
+var SAMPLE='DevOps Intern\n\nWe are looking for an intern with hands-on experience in AWS (EC2, VPC, S3, IAM), Terraform, Docker and Kubernetes. You will build CI/CD pipelines using Jenkins, monitor systems with Datadog or Prometheus, and write Bash or Python scripts on Linux. Knowledge of Ansible, Helm and Grafana is a plus.';
+var resume=DEFAULT,custom=false;
+
+function has(t,a){return a.some(function(x){return new RegExp('(^|[^a-z0-9])'+x.replace(/[.*+?^${}()|[\]\\\/]/g,'\\$&')+'($|[^a-z0-9])','i').test(t)})}
+
+/* ---------- file reading ---------- */
+function load(src){return new Promise(function(ok,no){var s=document.createElement('script');s.src=src;s.onload=ok;s.onerror=no;document.head.appendChild(s)})}
+async function pdfText(buf){
+ if(!window.pdfjsLib){await load('https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js');pdfjsLib.GlobalWorkerOptions.workerSrc='https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js'}
+ var d=await pdfjsLib.getDocument({data:buf}).promise,t='';
+ for(var i=1;i<=d.numPages;i++){var c=await (await d.getPage(i)).getTextContent();t+=c.items.map(function(x){return x.str}).join(' ')+'\n'}
+ return t}
+async function docxText(buf){if(!window.mammoth)await load('https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.6.0/mammoth.browser.min.js');return (await mammoth.extractRawText({arrayBuffer:buf})).value}
+function say(m,c){var e=$('#rst');e.textContent=m;e.className=c||''}
+async function read(f){
+ if(!f)return;say('Reading '+f.name+'…');
+ try{var n=f.name.toLowerCase(),t;
+  if(n.endsWith('.pdf'))t=await pdfText(await f.arrayBuffer());
+  else if(n.endsWith('.docx'))t=await docxText(await f.arrayBuffer());
+  else if(n.endsWith('.txt'))t=await f.text();
+  else throw new Error('Unsupported file type. Use PDF, DOCX or TXT.');
+  if(t.trim().split(/\s+/).length<30)throw new Error('Very little text found. This may be a scanned or image-only PDF, which real ATS tools cannot read either. Try pasting the text instead.');
+  resume=t;custom=true;$('#rtxt').value=t;say('✔ '+f.name+' loaded · '+t.trim().split(/\s+/).length+' words readable','ok')}
+ catch(e){say(e.message||'Could not read that file. Try pasting the text instead.','err')}}
+var dz=$('#drop');
+$('#rf').onchange=function(e){read(e.target.files[0])};
+['dragover','dragenter'].forEach(function(v){dz.addEventListener(v,function(e){e.preventDefault();dz.classList.add('over')})});
+['dragleave','drop'].forEach(function(v){dz.addEventListener(v,function(e){e.preventDefault();dz.classList.remove('over')})});
+dz.addEventListener('drop',function(e){read(e.dataTransfer.files[0])});
+$('#rtxt').oninput=function(e){var v=e.target.value;if(v.trim()){resume=v;custom=true;say('Using your pasted text','ok')}else{resume=DEFAULT;custom=false;say('Using the default resume from this portfolio.')}};
+
+/* ---------- scoring ---------- */
+function health(t){var w=t.trim().split(/\s+/).length;return[
+ ['Email',/[\w.+-]+@[\w-]+\.[\w.]+/.test(t)],['Phone',/(\+?\d[\d\s\-().]{8,}\d)/.test(t)],
+ ['Skills section',/skills/i.test(t)],['Projects / Experience',/projects?|experience|internship/i.test(t)],
+ ['Education',/education|b\.?sc|b\.?tech|university|college/i.test(t)],['Enough text',w>=120]]}
+function chips(a,c){return a.length?a.map(function(x){return '<span class="chip '+c+'">'+x+'</span>'}).join(''):'<span class="note" style="margin:0">None</span>'}
+function run(){
+ var jd=$('#jd').value,r=$('#rg'),C=389.6,f=D.filter(function(d){return has(jd,d.a)});
+ if(!f.length){$('#sc').textContent='--';r.style.strokeDashoffset=C;$('#vd').textContent=jd.trim()?'No recognised keywords':'Waiting for a job description';$('#tp').textContent=jd.trim()?'No cloud or DevOps keywords found. Paste the full job description.':'Add a job description and press “Check ATS score”.';$('#mt').innerHTML='';$('#ms').innerHTML='';$('#hl').innerHTML='';return}
+ var m=f.filter(function(d){return has(resume,d.a)}),x=f.filter(function(d){return m.indexOf(d)<0}),h=health(resume),hp=h.filter(function(i){return i[1]}).length/h.length,
+ kw=m.length/f.length,s=Math.round(80*kw+20*hp);
+ r.style.strokeDashoffset=C*(1-s/100);r.style.stroke=s>=75?'#7cf2c3':s>=50?'#4aa3ff':'#ff9d3f';
+ var n=0,i=setInterval(function(){n+=Math.max(1,Math.ceil(s/25));if(n>=s){n=s;clearInterval(i)}$('#sc').textContent=n},30);
+ $('#vd').textContent=s>=75?'Strong match':s>=50?'Good match':'Needs work';
+ $('#tp').textContent=m.length+' of '+f.length+' job keywords found in '+(custom?'your resume':'the default resume')+'. '+(x.length?'Add '+x.slice(0,3).map(function(d){return d.k}).join(', ')+(x.length>3?' and others':'')+' only if you have real experience with them.':'Every keyword in this description is covered.');
+ $('#mt').innerHTML=chips(m.map(function(d){return d.k}),'ok');$('#ms').innerHTML=chips(x.map(function(d){return d.k}),'miss');
+ $('#hl').innerHTML=h.map(function(i){return '<span class="chip '+(i[1]?'ok':'bad')+'">'+(i[1]?'✔ ':'✖ ')+i[0]+'</span>'}).join('')}
+$('#an').onclick=run;$('#sm').onclick=function(){$('#jd').value=SAMPLE;run()};$('#cl').onclick=function(){$('#jd').value='';run()};
+})();
+
 </script>
 </body>
 </html>
