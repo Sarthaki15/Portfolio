@@ -114,33 +114,33 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <span class="tag"><i></i>Open to Cloud / DevOps internships</span>
 <h1>Sarthaki Parad<br><em>Building, Automating &amp; Deploying.</em></h1>
 <div class="role mono">&gt; <b id="typed"></b></div>
-<p class="lead">B.Sc. Computer Science (Cloud Computing, Honours) student. I provision AWS with Terraform, ship containers to Kubernetes and wire it all together with Jenkins pipelines.</p>
-<div class="cta"><a class="btn" href="#infra">Explore my infrastructure</a><a class="btn ghost" href="#contact">Contact me</a></div></div>
+<p class="lead">B.Sc. Computer Science (Cloud Computing, Honours) student building across cloud infrastructure, containerization, CI/CD automation and monitoring. I use AWS, Linux, Docker, Kubernetes, Terraform and Jenkins to take applications from code to deployment.</p>
+<div class="cta"><a class="btn" href="#projects">Explore my projects</a><a class="btn ghost" href="#contact">Contact me</a></div></div>
 <div class="glass term"><div class="tb"><i></i><i></i><i></i></div><pre id="term"></pre></div></div>
 <div class="stats">
-<div class="glass stat"><b data-n="5">0</b><span>Cloud projects</span></div>
-<div class="glass stat"><b data-n="3">0</b><span>Environments managed</span></div>
-<div class="glass stat"><b data-n="30">0</b><span>AWS services used</span></div>
+<div class="glass stat"><b data-n="5">0</b><span>Projects built</span></div>
+<div class="glass stat"><b data-n="10">0</b><span>DevOps tools &amp; technologies</span></div>
+<div class="glass stat"><b data-n="30">0</b><span>AWS services explored</span></div>
 <div class="glass stat"><b data-n="2027">0</b><span>Graduating</span></div></div>
 </div></header>
 
 <section id="about"><div class="wrap rv">
 <div class="eyebrow">About me</div><h2>Practical cloud engineering, built hands-on.</h2>
 <div class="grid" style="grid-template-columns:1.4fr 1fr">
-<div><p class="sub" style="max-width:none">I’m a B.Sc. Computer Science student at MIT World Peace University, Pune. I learn by building: reusable Terraform modules, multi-environment setups and complete CI/CD pipelines, secured with least-privilege IAM and watched with Datadog and Amazon CloudWatch.</p><p class="sub" style="max-width:none">I’m looking for a Cloud or DevOps internship where I can apply these skills on real systems and keep growing.</p></div>
+<div><p class="sub" style="max-width:none">I’m a B.Sc. Computer Science (Cloud Computing, Honours) student at MIT World Peace University, Pune, interested in building reliable cloud systems and automating software delivery. I work with AWS, Linux, Docker, Kubernetes, Terraform, Jenkins, GitHub Actions, and monitoring tools such as Datadog and Amazon CloudWatch. I enjoy learning by building practical projects—from infrastructure automation to containerized applications and CI/CD pipelines.</p><p class="sub" style="max-width:none">My goal is to grow as a Cloud & DevOps Engineer by solving practical problems, improving deployment workflows, and continuously learning through hands-on projects.</p></div>
 <div class="glass card"><h3>Core strengths</h3><div class="chips"><span class="chip">Problem solving</span><span class="chip">Troubleshooting</span><span class="chip">Analytical thinking</span><span class="chip">Communication</span><span class="chip">Team collaboration</span><span class="chip">Adaptability</span></div></div></div>
 </div></section>
 
 <section id="infra"><div class="wrap rv">
-<div class="eyebrow">Interactive · Project 01</div><h2>Multi-environment infrastructure.</h2>
-<p class="sub">Switch the Terraform workspace to see how the same modules scale across environments. Illustrative architecture based on my project.</p>
+<div class="eyebrow">Featured project · 01</div><h2>Terraform infrastructure across environments.</h2>
+<p class="sub">One of my projects explores reusable Terraform modules and environment separation. Switch workspaces to see the illustrative architecture; explore the other projects below for my wider DevOps work.</p>
 <div class="tabs" id="envs"><button class="tab on" data-e="dev">dev</button><button class="tab" data-e="staging">staging</button><button class="tab" data-e="prod">prod</button></div>
 <div class="glass viz"><svg id="svg" viewBox="0 0 720 330" role="img" aria-label="AWS architecture diagram"></svg>
 <div class="info"><span>Workspace: <b id="iw">dev</b></span><span>EC2 instances: <b id="ie">1</b></span><span>State: <b>S3 + DynamoDB lock</b></span><span>Monitoring: <b>Datadog</b></span></div></div>
 </div></section>
 
 <section id="pipeline"><div class="wrap rv">
-<div class="eyebrow">Interactive · Project 02</div><h2>Commit to Kubernetes, automated.</h2>
+<div class="eyebrow">Featured project · 02</div><h2>From code commit to deployment.</h2>
 <p class="sub">Run the pipeline I built with Jenkins, or trigger a rollback like I do with <code>kubectl rollout undo</code>.</p>
 <div class="pipe" id="pipe"></div>
 <div class="cta" style="margin:0 0 16px"><button class="btn" id="run">▶ Run pipeline</button><button class="btn ghost" id="undo">↺ Rollback</button></div>
@@ -212,7 +212,7 @@ var roles=['Cloud & DevOps Engineer','Linux · AWS · GitHub','Docker · Kuberne
 function ty(){var s=roles[ri];T.textContent=s.slice(0,ci);if(!del&&ci===s.length){del=true;return setTimeout(ty,1400)}if(del&&ci===0){del=false;ri=(ri+1)%roles.length}ci+=del?-1:1;setTimeout(ty,del?30:60)}
 rm?T.textContent=roles[0]:ty();
 /* hero terminal */
-var lines=['<span class="c">$</span> terraform workspace select prod','<span class="c">$</span> terraform apply -auto-approve','<span class="g">✔ vpc, ec2, rds, s3 created</span>','<span class="c">$</span> kubectl rollout status deploy/app','<span class="g">✔ successfully rolled out</span>','<span class="c">$</span> kubectl rollout undo deploy/app','<span class="o">↺ restored previous revision</span>'],tp=$('#term');
+var lines=['<span class="c">$</span> git push origin main','<span class="c">$</span> terraform apply -auto-approve','<span class="g">✔ infrastructure provisioned</span>','<span class="c">$</span> jenkins build app-pipeline','<span class="g">✔ tests passed · quality gate passed</span>','<span class="c">$</span> docker build -t web-app .','<span class="g">✔ image built and pushed</span>','<span class="c">$</span> kubectl rollout status deploy/app','<span class="g">✔ deployment verified · monitoring active</span>'],tp=$('#term');
 (function(){var i=0;function n(){if(i<lines.length){tp.innerHTML+=(i?'\n':'')+lines[i++];setTimeout(n,rm?0:650)}else if(!rm){setTimeout(function(){tp.innerHTML='';i=0;n()},3500)}}n()})();
 /* counters */
 document.querySelectorAll('[data-n]').forEach(function(el){var n=+el.dataset.n,s=n>1000?n-40:0,st=Math.max(1,Math.ceil(n/50)),i=setInterval(function(){s+=st;if(s>=n){s=n;clearInterval(i)}el.textContent=s},30)});
