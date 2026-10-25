@@ -112,7 +112,7 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <header class="hero" id="top"><div class="wrap">
 <div class="hg"><div>
 <span class="tag"><i></i>Open to Cloud / DevOps internships</span>
-<h1>Sarthaki Parad<br><em>automates the cloud.</em></h1>
+<h1>Sarthaki Parad<br><em>Building, Automating &amp; Deploying.</em></h1>
 <div class="role mono">&gt; <b id="typed"></b></div>
 <p class="lead">B.Sc. Computer Science (Cloud Computing, Honours) student. I provision AWS with Terraform, ship containers to Kubernetes and wire it all together with Jenkins pipelines.</p>
 <div class="cta"><a class="btn" href="#infra">Explore my infrastructure</a><a class="btn ghost" href="#contact">Contact me</a></div></div>
@@ -120,7 +120,7 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <div class="stats">
 <div class="glass stat"><b data-n="5">0</b><span>Cloud projects</span></div>
 <div class="glass stat"><b data-n="3">0</b><span>Environments managed</span></div>
-<div class="glass stat"><b data-n="30+">0</b><span>AWS services used</span></div>
+<div class="glass stat"><b data-n="30">0</b><span>AWS services used</span></div>
 <div class="glass stat"><b data-n="2027">0</b><span>Graduating</span></div></div>
 </div></header>
 
@@ -154,10 +154,10 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 
 <section id="projects"><div class="wrap">
 <div class="eyebrow">Projects</div><h2>What I’ve built.</h2>
-<article class="glass pj card rv"><div class="n">01</div><h3>Multi-Environment Terraform Infrastructure with Datadog Monitoring</h3><p>Automated AWS provisioning across Development, Staging and Production.</p>
+<article class="glass pj card rv"><div class="n">01</div><h3><a href="https://github.com/Sarthaki15" target="_blank" rel="noopener noreferrer">Multi-Environment Terraform Infrastructure with Datadog Monitoring ↗</a></h3><p>Automated AWS provisioning across Development, Staging and Production.</p>
 <div class="chips"><span class="chip">Terraform</span><span class="chip">AWS</span><span class="chip">Datadog</span><span class="chip">Linux</span><span class="chip">Git</span></div>
 <ul><li><b>Provisioning:</b> reusable modules for VPC, EC2, security groups and RDS.</li><li><b>Environments:</b> Terraform Workspaces with environment-specific configs.</li><li><b>Remote state:</b> S3 storage with DynamoDB locking.</li><li><b>IAM:</b> users, roles and policies following least privilege.</li><li><b>Monitoring:</b> Datadog for health, utilization and metrics.</li></ul></article>
-<article class="glass pj card rv"><div class="n">02</div><h3>End-to-End CI/CD Pipeline for a Multi-Environment Web App on AWS</h3><p>From commit to Kubernetes deployment with testing, quality checks and alerting.</p>
+<article class="glass pj card rv"><div class="n">02</div><h3><a href="https://github.com/Sarthaki15" target="_blank" rel="noopener noreferrer">End-to-End CI/CD Pipeline for a Multi-Environment Web App on AWS ↗</a></h3><p>From commit to Kubernetes deployment with testing, quality checks and alerting.</p>
 <div class="chips"><span class="chip">Jenkins</span><span class="chip">Docker</span><span class="chip">EKS</span><span class="chip">Terraform</span><span class="chip">SonarQube</span><span class="chip">Jest</span><span class="chip">CloudWatch</span></div>
 <ul><li><b>IaC:</b> Terraform modules across Dev, Staging and Prod.</li><li><b>CI/CD:</b> Jenkins pipelines triggered on branch changes.</li><li><b>Deploy:</b> Docker Hub images deployed to Amazon EKS.</li><li><b>Rollback:</b> rolling updates and <code>kubectl rollout undo</code>.</li><li><b>Config:</b> ConfigMaps and Secrets kept out of images.</li><li><b>Quality:</b> Jest unit tests and SonarQube analysis.</li><li><b>Security:</b> IAM roles with least privilege.</li><li><b>Alerting:</b> CloudWatch metrics, logs and alerts.</li></ul></article>
 </div></section>
@@ -187,7 +187,7 @@ footer{padding:26px 0;text-align:center;color:var(--mute);font-size:.84rem;borde
 <section class="contact" id="contact"><div class="wrap rv">
 <div class="eyebrow">Contact</div><h2>Let’s build something reliable.</h2>
 <p class="lead">Looking for a Cloud or DevOps internship. Reach out for opportunities or collaborations.</p>
-<div class="cta" style="justify-content:center"><a class="btn" href="mailto:sarthakiparad@gmail.com">sarthakiparad@gmail.com</a><a class="btn ghost" href="tel:+919377229309">+91 93772 29309</a><a class="btn ghost" href="https://github.com/">GitHub</a><a class="btn ghost" href="https://www.linkedin.com/">LinkedIn</a></div>
+<div class="cta" style="justify-content:center"><a class="btn" href="mailto:sarthakiparad@gmail.com">sarthakiparad@gmail.com</a><a class="btn ghost" href="tel:+919377229309">+91 93772 29309</a><a class="btn ghost" href="https://github.com/Sarthaki15">GitHub</a><a class="btn ghost" href="https://www.linkedin.com/in/sarthakiparad/">LinkedIn</a></div>
 </div></section>
 <footer>© 2026 Sarthaki Pravin Parad · Pune, India</footer>
 
@@ -208,7 +208,7 @@ fr();
 addEventListener('pointermove',function(e){var g=$('#glow');g.style.left=e.clientX+'px';g.style.top=e.clientY+'px'});
 addEventListener('scroll',function(){var h=document.documentElement;$('#prog').style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%'});
 /* typing */
-var roles=['Cloud Engineer in the making','Terraform · AWS · Kubernetes','CI/CD with Jenkins','Least-privilege IAM advocate'],ri=0,ci=0,del=false,T=$('#typed');
+var roles=['Cloud & DevOps Engineer','Linux · AWS · GitHub','Docker · Kubernetes','CI/CD with Jenkins & GitHub Actions','Monitoring with Datadog & CloudWatch','Infrastructure as Code with Terraform','Automating Cloud Infrastructure','Building, Automating & Deploying'],ri=0,ci=0,del=false,T=$('#typed');
 function ty(){var s=roles[ri];T.textContent=s.slice(0,ci);if(!del&&ci===s.length){del=true;return setTimeout(ty,1400)}if(del&&ci===0){del=false;ri=(ri+1)%roles.length}ci+=del?-1:1;setTimeout(ty,del?30:60)}
 rm?T.textContent=roles[0]:ty();
 /* hero terminal */
